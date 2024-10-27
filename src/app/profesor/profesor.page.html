@@ -1,13 +1,12 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>profesor</ion-title>
+    <ion-title>Asistencia Profesor</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">profesor</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding">
+  <ion-button (click)="generarQR()">Generar Código QR</ion-button>
+  <div *ngIf="qrCodeData">
+    <img [src]="qrCodeData" alt="Código QR de Asistencia" />
+  </div>
 </ion-content>
