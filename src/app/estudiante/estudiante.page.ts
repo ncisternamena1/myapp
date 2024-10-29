@@ -39,7 +39,7 @@ export class EstudiantePage {
 
     const sessionData = await sessionRef.get().toPromise();
 
-    if (sessionData.exists) {
+    if (sessionData?.exists) {
       await this.firestore.collection('asistencias').add({
         estudianteId,
         sessionId: qrCode,
